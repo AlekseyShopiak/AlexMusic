@@ -28,3 +28,31 @@ function httpGet(url) {
   });  
 }
 
+function myClick(){
+
+	let str = document.querySelector('.textbox').value;
+
+	httpGet(`https://api.github.com/users/${str}`)
+  	.then(
+   	 JSON.parse,
+    	function githubError(error) {
+      	if (error.code == 404) {
+      	  return {name: "NoGithub", avatar_url: '/article/promise/anon.png'};
+    	  } else {
+      	  throw error;
+      	}
+    	}
+  	)
+
+  	.then(function showAvatar(githubUser) {
+    	let img = new Image();
+    	img.src = githubUser.avatar_url;
+    	img.className = "promise-avatar-example";
+    	document.body.appendChild(img);
+    	//setTimeout(() => img.remove(), 3000);
+  	})
+		
+  	.catch(function genericError(error) {
+  	  alert(error); // Error: Not Found
+  	});
+}
