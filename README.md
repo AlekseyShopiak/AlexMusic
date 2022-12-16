@@ -1,1 +1,2 @@
-# MyTube Music - is a clone of a world famous YouTube Music.
+# Сервіс, що збирає до купи основну інформацію про користувача GitHub та допомагає швидко та легко її проаналізувати
+
