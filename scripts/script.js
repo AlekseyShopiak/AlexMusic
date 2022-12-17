@@ -1,8 +1,9 @@
 'use strict';
 
 document.querySelector('button').onclick = myClick;
+
 let avatar = document.getElementById('avatar');
-avatar.src = "default3.png";
+//avatar.src = "images/default1.png";
 
 function httpGet(url) {
 
@@ -31,7 +32,6 @@ function httpGet(url) {
 }
 
 function myClick(){
-	
 	let str = document.querySelector('.textbox').value;
 	httpGet(`https://api.github.com/users/${str}`)
   	.then(

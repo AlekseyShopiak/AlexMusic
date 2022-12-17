@@ -1,0 +1,47 @@
+body {
+  background-color: #a2b6bc;    
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  border: 3px solid #69748b;
+  background-image: url(../images/default.jpg);
+}
+
+.container {
+  background-color: #76919e; 
+  display:block;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.segment {
+	border:3px solid #c6afaf;
+	display:block;
+	margin: 2px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.header {
+  color: #122831;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center; 
+}
+
+.header2 {
+  color: #122831;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+colors {
+  color: #69748b;
+  color: #76919e;
+  color: #a2b6bc;
+  color: #dce1e5;
+  color: #f3f3f3;
+}
