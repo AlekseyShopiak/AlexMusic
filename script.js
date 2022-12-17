@@ -1,6 +1,8 @@
 'use strict';
 
 document.querySelector('button').onclick = myClick;
+let avatar = document.getElementById('avatar');
+avatar.src = "default3.png";
 
 function httpGet(url) {
 
@@ -29,9 +31,8 @@ function httpGet(url) {
 }
 
 function myClick(){
-
+	
 	let str = document.querySelector('.textbox').value;
-
 	httpGet(`https://api.github.com/users/${str}`)
   	.then(
    	 JSON.parse,
@@ -45,10 +46,11 @@ function myClick(){
   	)
 
   	.then(function showAvatar(githubUser) {
-    	let img = new Image();
-    	img.src = githubUser.avatar_url;
-    	img.className = "promise-avatar-example";
-    	document.body.appendChild(img);
+		avatar.src = githubUser.avatar_url;
+    	//let img = new Image();
+    	//img.src = githubUser.avatar_url;
+    	//img.className = "promise-avatar-example";
+    	//document.body.appendChild(img);
     	//setTimeout(() => img.remove(), 3000);
   	})
 		

@@ -1,0 +1,29 @@
+body {
+  background-color: #76919e;    
+}
+
+container {
+	border:3px solid #69748b;
+	display:block;
+	margin: 2px;
+}
+
+img {
+	width: 300px;
+	height: 300px;
+}
+
+header {
+	color: #122831;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center; 
+}
+
+colors {
+  color: #69748b;
+	color: #76919e;
+	color: #a2b6bc;
+	color: #dce1e5;
+	color: #f3f3f3;
+}
